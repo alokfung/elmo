@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elmo Sign up Successful</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login/css/index.css' %}">
+</head>
+<body class="bkg">
+    <!-- Navigation -->
+    <div class="divnav">
+        <h1>PROJECT ELMO</h1>
+        <ul class="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Something else</a></li>
+        </ul>
+    </div>
+    <div class="spacing">
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="form">
+            <h2>Success!</h2>
+            <em>{{name}}, we're happy that you decided to join us for the revolution of education. There is tons to do!</em>
+            <br/>
+            <form action="signin" type="get">
+                <input type="submit" value="Let's get to it!" class="btn btn-success">
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

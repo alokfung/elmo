@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elmo Sign up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login/css/index.css' %}">
+</head>
+<body class="bkg">
+    <div class="divnav">
+        <h1>PROJECT ELMO</h1>
+        <ul class="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Something else</a></li>
+        </ul>
+    </div>
+    <div class="spacing">
+    </div>
+    <div class="container">
+        <div class="form">
+            <h2>Sign up now!</h2>
+                <img src="{% static 'login/images/create.jpg' %}" alt="create" class="fullimg">
+                <form action="process" method="POST">
+                    {% csrf_token %}
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" class="form-control">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name" class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" class="form-control">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" class="form-control">
+                    <label for="confirm">Confirm Password:</label>
+                    <input type="password" name="confirm" class="form-control">
+                    <br/>
+                    <input type="submit" name="signup" value="Sign up" class="btn btn-success lg_btn">
+                </form>
+        </div>
+        
+        <!-- Validation Errors -->
+        <ul class="bg-danger">
+            {% if messages %}
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login/css/index.css' %}">
+</head>
+<body class="bkg">
+    <div class="divnav">
+        <h1>PROJECT ELMO</h1>
+        <ul class="nav">
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Something else</a></li>
+        </ul>
+    </div>
+    <div class="spacing">
+    </div>
+    <div class="container">
+        <h1>User Dashboard</h1>
+        <em>{{name}}, Looks like you don't have any profiles set up!</em>
+        <button class="btn btn-success">Create a profile</button>
+
+    </div>
+</body>
+</html>
